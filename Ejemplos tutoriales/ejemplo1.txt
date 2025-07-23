@@ -1,0 +1,35 @@
+instrumento melodia = 5
+instrumento bajo = 49
+
+tempo=100
+compas 4/4
+
+oct=5
+melodia: {
+    (mi,c)(sol,c)(la,c)(si,c)
+    (la,c)(sol,c)(mi,c)(re,c)
+
+    (fa,c)(sol,c)(la,c)(sol,c)
+    (mi,c)(fa,c)(sol,c)(la,c)
+
+    (si,c)(la,c)(sol,c)(mi,c)
+    (fa,c)(sol,c)(la,c)(si,c)
+
+    (la,c)(sol,c)(mi,c)(re,c)
+    (mi,c)(sol,c)(la,c)(si,c)
+}
+repeat(2) melodia
+
+oct=3
+bajo: {
+    (do,n)(sol,n)
+    (la,n)(mi,n)
+    (fa,n)(do,n)
+    (sol,n)(re,n)
+
+    (mi,n)(si,n)
+    (fa,n)(do,n)
+    (sol,n)(re,n)
+    (la,n)(mi,n)
+}
+repeat(2) bajo

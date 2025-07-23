@@ -1,0 +1,22 @@
+instrumento melodia = 6
+tempo=80
+compas 4/4
+
+oct=5
+melodia: {
+    (fa,b) (fa,c) (fa,n) (fa,n) (mi,n) (fa,b) (fa,n)
+    (mi,n) (fa,b) (sol,n) (la,b) (sol,b)
+    
+    (fa,b) (fa,c) (fa,n) (fa,n) (mi,n) (fa,b) (fa,n) (do,r)
+
+    (fa,r) (sol,b) (do,n) (si$,n) (la,n) (sol,b) (la,n)
+    (si$,n) (la,b) (sol,n) (fa,n) (mi,n) (fa,b) (mi,n)
+    (re,r) (do,r)
+    (fa,r) (sol,b) (do,n) (si$,n) (la,n) (sol,b) (la,n)
+    (si$,n) (la,b) (sol,n) (fa,n) (mi,n) (fa,b) (mi,n)
+    (re,r) (do,r)
+
+    (mi,n) (fa,b) (sol,n) (la,b) (sol,b) (fa,r)
+    
+}
+repeat(2) melodia

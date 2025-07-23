@@ -1,0 +1,20 @@
+instrumento melodia = 1
+
+tempo=120
+compas 4/4
+
+oct=5
+melodia: {
+    (la,c) (la,c) (la,c) (la,n) (sol,c) (fa#,c) (sol,n)
+    (la,c) (fa#,n) (sile,c) (re,c) (sol,c) (fa#,c) (re,c)
+    (sol,n) (sol,n) (sile,n) (fa#,c) (mi,n) (re,c) (sol,n)
+    (fa#,c) (re,c) (sol,n) (fa#,c) (re,c) (sol,n) (fa#,c) (re,c)
+    (sol,n) (sol,n) (sol,c) (sol,r) (sile,b) (la,c) (la,c)
+    (sile,c) (la,n). (sol,c) (fa#,c) (sol,c) (la,c) (sile,c)
+    (la,n). (la,n) (sol,c) (fa#,c) (re,c) (sol,n) (fa#,c) (re,n)
+    (sol,c) (la,c) (sile,c) (la,n). (fa#,c) (sol,c) (fa#,c)   
+
+    (sol,c) (fa#,c) (sol,c) (fa#,c) (sol,n). (re,c) (sol,c) (sol,c)
+    (sol,n) (sol,c) (la,n). (sol,c) (la,b)
+}
+repeat(2) melodia

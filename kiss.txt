@@ -1,0 +1,30 @@
+instrumento melodia = 1
+
+tempo=150
+compas 4/4
+
+oct=5
+melodia: {
+    (re,n) (mi,n) (fa,n) (sol,c) (la,n) (la,c)
+    (sol,n) (fa,n) (mi,n) (re,n) (mi,n) (fa,n)
+    (sol,c) (la,n) (la,c) (sol,b).
+
+    (re,n) (mi,n) (fa,n) (sol,c) (la,n) (la,c)
+    (sol,n) (fa,n) (mi,n) (re,n) (mi,n) (fa,n)
+    (sol,c) (la,c) (la,c) (la,c) (sol,b) (sile,c)
+    (do,c) (re,r) (sile,c) (la,n) (la,c) (la,c)
+    (sol,c) (fa,c) (sol,c) (la,r) (sile,b) (la,n)
+    (la,n) (la,n). (sol,c) (sol,b) (sile,b) (sol,n)
+    (la,n) (sol,n). (fa,c) (fa,r) (sile,c) (do,c)
+    
+    (re,r) (sile,c) (la,n) (la,c) (la,n) (la,c) (la,c)
+    (sol,c) (fa,c) (sol,c) (la,r) (sile,b) (la,n)
+    (la,n) (la,n). (sol,c) (sol,b) (sile,b) (sol,n)
+    (la,n) (sol,n). (sol,n). (sol,r) (sile,b)
+
+    (re,n) (mi,n) (fa,n) (sol,c) (la,n) (la,c)
+    (sol,n) (fa,n) (mi,n) (re,n) (mi,n) (fa,n)
+    (sol,c) (la,n) (la,c) (sol,b).
+    
+}
+repeat(2) melodia
