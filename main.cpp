@@ -49,17 +49,6 @@ class Parser {
     double tiempoActual = 0;
     map<string, vector<Token>> patronesDefinidos;
 
-    void validarOctava(int octava, int linea) const {
-        if (octava < 0 || octava > 10) {
-            throw runtime_error("Linea " + to_string(linea) + ": Octava fuera de rango valido (0-10). Se encontro " + to_string(octava));
-        }
-    }
-    void validarNumeroRepeticiones(int rep, int linea) const {
-        if (rep <= 0) {
-            throw runtime_error("Linea " + to_string(linea) + ": El numero de repeticiones en 'repeat' debe ser mayor que cero. Se encontro " + to_string(rep));
-        }
-    }
-
 public:
     Parser(const vector<Token>& tokens) : tokens(tokens), pos(0) {}
     
@@ -67,7 +56,7 @@ public:
         return notasExtraidas;
     }
 
-    const map<string, vector<Token>>& getPatronesDefinidos() const {
+    const map<string, vector<Token>& getPatronesDefinidos() const {
         return patronesDefinidos;
     }
     void parse() {
@@ -77,9 +66,7 @@ public:
                 tokens[pos].tipo == "Instrumento") { 
                 if (tokens[pos].tipo == "Octava") {
                     string lex = tokens[pos].lexema;
-                    int nuevaOctava = stoi(lex.substr(4)); // oct=4
-                    validarOctava(nuevaOctava, tokens[pos].linea);
-                    octavaActual = nuevaOctava;
+                    octavaActual = stoi(lex.substr(4)); // oct=4
                 }
                 match(tokens[pos].tipo);
             } else if (tokens[pos].tipo == "Definicion") {
@@ -152,13 +139,12 @@ private:
 
     void usos() {
         while (pos < tokens.size() && tokens[pos].tipo == "Repeat"){
-            string lex = tokens[pos].lexema; // repeat(2) ritmo1
+            int lex = tokens[pos].lexema; // repeat(2) ritmo1
             smatch m;
             regex r("repeat\\((\\d+)\\) ([a-zA-Z_][a-zA-Z0-9_]*)");
             if (regex_match(lex, m, r)) {
                 int rep = stoi(m[1]);
                 string nombre = m[2];
-                validarNumeroRepeticiones(rep, tokens[pos].linea);
                 if (patronesDefinidos.count(nombre) == 0) {
                     lanzarError("Patron no definido: " + nombre);
                 }
@@ -227,7 +213,7 @@ vector<Token> analizarLinea(const string& linea, int numeroLinea) {
         {"Octava", regex("oct=\\d+")},
         {"RepeticionInicio", regex("\\|:")},
         {"RepeticionFin", regex(":\\|")},
-        {"SeparadorCompas", regex("\\|")},  
+        {"SeparadorCompas", regex("\\|")},
         {"BloqueInicio", regex("\\{")},
         {"BloqueFin", regex("\\}")},
         {"DecoradorPuntillo", regex("\\.")},
@@ -333,7 +319,7 @@ int main() {
                 instrumento = instrumentosPorPatron[nombresPatrones[i]];
             sample << Instrument(0, i)(instrumento); // <-- Cambia el instrumento aquí
             for (auto [t, dur, pitch] : pistas[i]) {
-                sample << Note(t, dur, pitch).channel(i); // Asegúrate de asignar el canal tambien
+                sample << Note(t, dur, pitch).channel(i); // Asegúrate de asignar el canal también
             }
         }
         sample.save("salida.mid");

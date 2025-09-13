@@ -1,23 +1,53 @@
-instrumento melodia = 12
+instrumento melodia = 81
+instrumento bajo = 33
 
 tempo=120
 compas 4/4
 
 oct=5
 melodia: {
-    (re,b). (mi,n) (fa,r) (la,n). (sol,n). (la,n)
-    (do,r) (re,b). (mi,n). (fa,b) (mi,b) (sol,b) 
-    (la,b) (sol,b) (fa,b)
+    (sol,c)(si,c)(do#,c)(do,c)(si,c)
+    (sol,c)(fa#,c)(mi,c)(fa#,c)(mi,c)(do#,c)(si,c)(do#,c)
 
-    (sile,n) (fa,n) (fa,n) (fa,n) (la,n) (la,n)
-    (sol,n) (fa,n) (sile,n) (la,n) (la,n) (la,n)
-    (sol,n) (la,n) (sol,n) (fa,n) (sile,n) (fa,n) 
-    (fa,n) (fa,n) (la,n) (la,n) (sol,n) (fa,n) 
-    (sile,n) (la,n) (la,n) (la,n)
-    (sile,n) (do#,n) (do#,n) (do#,n)
-    (sile,n) (fa,n) (fa,n) (fa,n) (la,n) (la,n) (sol,n) (fa,n) (sile,n) 
-    (si,n) (si,n) (si,n)
-    (sol,b) (do,b) (la,b) (do#,b) (re,r)
-    
+    (fa#,c)(sol,c)(la,c)(sol#,c)(mi,c)
+    (fa#,c)(sol,c)(la,c)(sol,c)(fa#,c)(mi,c)
+
+    (sol,c)(si,c)(do#,c)(re,c)(do#,c)(si,c)
+    (sol,c)(fa#,c)(mi,c)(fa#,c)(sol,c)(fa#,c)(mi,c)(re,c)
+
+    (fa#,c)(sol,c)(fa#,c)(mi,c)(do#,c)(mi,c)
+    (fa#,c)(sol,c)(fa#,c)(mi,c)(re,c)(do#,c)
+
+    (do#,c)(re,c)(mi,c)(fa#,c)(do#,c)
+    (do#,c)(re,c)(mi,c)(fa#,c)(mi,c)
+
+    (sol,c)(fa#,c)(mi,c)(re,c)(mi,c)(fa#,c)(sol,c)(la,c)
+    (sol,c)(fa#,c)(mi,c)(fa#,c)(mi,c)
+
+    (sol,c)(fa#,c)(mi,c)(re,c)(mi,c)(fa#,c)(sol,c)(la,c)
+    (sol,c)(fa#,c)(mi,c)(fa#,c)(mi,c)
 }
-repeat(2) melodia
+
+oct=2
+bajo: {
+    (la,c)(do#,c)(si,c)
+    (la,c)(do#,c)(si,c)
+
+    (la,c)(do#,c)(si,c)
+    (la,c)(do#,c)(si,c)
+
+    (la,c)(do,c)(si,c)
+    (la,c)(do,c)(si,c)
+
+    (la,c)(do#,c)(mi,c)
+    (la,c)(do#,c)(mi,c)
+
+    (la,c)(do#,c)(mi,c)
+    (la,c)(do#,c)(mi,c)
+
+    (fa#,c)(la,c)(do,c)
+    (fa#,c)(la,c)(do,c)
+
+    (sol#,c)(si,c)(re,c)
+    (sol#,c)(si,c)(re,c)
+}
